@@ -1,4 +1,4 @@
-import 'package:appsmartfarm_flutter/screens/BottomNavigationScreen.dart';
+import 'package:appsmartfarm_flutter/packages/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.openSansTextTheme(),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const BottomNavigationScreen(),
+      home: const Splash(),
     );
   }
 }
