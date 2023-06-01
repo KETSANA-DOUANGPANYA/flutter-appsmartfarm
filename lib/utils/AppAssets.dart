@@ -15,4 +15,12 @@ class AppAssets {
   static const String icon2 = 'assets/icons/icon_2.png';
   static const String icon3 = 'assets/icons/icon_3.png';
   static const String icon4 = 'assets/icons/icon_4.png';
+  static const String home = 'assets/icons/home.png';
+  static const String logout = 'assets/icons/logout.png';
+  static const String profile = 'assets/icons/profile.png';
+  static const String salad = 'assets/icons/salad.png';
+  static const String mushroom = 'assets/icons/mushroom.png';
+  static const String nullfuture = 'assets/icons/null.png';
+  static const String back = 'assets/icons/back.png';
+  static const String arrow = 'assets/icons/left-arrow.png';
 }

@@ -14,15 +14,15 @@ class TopSelectButton extends StatelessWidget {
       items: const [
         DropdownMenuItem<String>(
           value: 'All Rooms',
-          child: Text('All Rooms'),
+          child: Text('ໂຮງເຮືອນທັງໝົດ'),
         ),
         DropdownMenuItem<String>(
           value: 'Living Room',
-          child: Text('Living Room'),
+          child: Text('ໂຮງເຮືອນຂອງຂ້ອຍ'),
         ),
       ],
       hint: const Text(
-        'Living Room',
+        'ໂຮງເຮືອນທັງໝົດ',
         style: TextStyle(
             fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
       ),
@@ -63,8 +63,8 @@ class HomeButton extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            gradient: isSelected ? appGradient : null,
-            color: !isSelected ? Get.theme.colorScheme.background : null,
+            gradient: !isSelected ? appGradient : null,
+            color: isSelected ? Get.theme.colorScheme.background : null,
           ),
           child: Column(children: [
             AppSpaces.vertical15,
@@ -75,9 +75,9 @@ class HomeButton extends StatelessWidget {
                   height: Get.height / 10,
                   child: Image.asset(
                     image,
-                    color: isSelected
-                        ? Colors.white
-                        : (unSelectedImageColor ?? Get.theme.primaryColor),
+                    // color: isSelected
+                    //     ? Colors.white
+                    //     : (unSelectedImageColor ?? Get.theme.primaryColor),
                   ),
                 ),
               ),

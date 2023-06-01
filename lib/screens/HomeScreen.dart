@@ -4,6 +4,7 @@ import 'package:appsmartfarm_flutter/utils/AppSpaces.dart';
 import 'package:appsmartfarm_flutter/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,17 +23,25 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 child: Row(children: [
                   HomeButton(
-                    image: AppAssets.livingroom.toString(),
-                    text: 'Living Room',
+                    image: AppAssets.salad,
+                    text: 'ໂຮງສະຫັຼດ',
                     isSelected: controller.index == 0,
-                    onTap: () => controller.setIndex(0),
+                    onTap: () {
+                      controller.setIndex(0);
+                      Navigator.pushReplacementNamed(
+                          context, custom_route.Route.temperature);
+                    },
                   ),
                   AppSpaces.horizontal20,
                   HomeButton(
-                    image: AppAssets.bedroom.toString(),
-                    text: 'Bedroom',
+                    image: AppAssets.mushroom,
+                    text: 'ໂຮງເຫັດ',
                     isSelected: controller.index == 1,
-                    onTap: () => controller.setIndex(1),
+                    onTap: () {
+                      controller.setIndex(1);
+                      Navigator.pushReplacementNamed(
+                          context, custom_route.Route.temperature);
+                    },
                   ),
                 ]),
               ),
@@ -40,15 +49,15 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 child: Row(children: [
                   HomeButton(
-                    image: AppAssets.kitchen.toString(),
-                    text: 'Kitchen',
+                    image: AppAssets.nullfuture,
+                    text: 'Null',
                     isSelected: controller.index == 2,
                     onTap: () => controller.setIndex(2),
                   ),
                   AppSpaces.horizontal20,
                   HomeButton(
-                    image: AppAssets.bathroom.toString(),
-                    text: 'Bathroom',
+                    image: AppAssets.nullfuture,
+                    text: 'Null',
                     isSelected: controller.index == 3,
                     onTap: () => controller.setIndex(3),
                   ),
@@ -58,20 +67,21 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 child: Row(children: [
                   HomeButton(
-                    image: AppAssets.studio.toString(),
-                    text: 'Studio',
+                    image: AppAssets.nullfuture,
+                    text: 'Null',
                     isSelected: controller.index == 4,
                     onTap: () => controller.setIndex(4),
                   ),
                   AppSpaces.horizontal20,
                   HomeButton(
-                    image: AppAssets.washingroom.toString(),
-                    text: 'Washing Room',
+                    image: AppAssets.nullfuture,
+                    text: 'Null',
                     isSelected: controller.index == 5,
                     onTap: () => controller.setIndex(5),
                   ),
                 ]),
               ),
+              AppSpaces.vertical30,
             ],
           ),
         );

@@ -1,4 +1,4 @@
-import 'package:appsmartfarm_flutter/controllers/TempatureController.dart';
+import 'package:appsmartfarm_flutter/controllers/HumidityController.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:appsmartfarm_flutter/utils/AppSpaces.dart';
 import 'package:appsmartfarm_flutter/widgets/buttons.dart';
@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
-class TempatureScreen extends StatelessWidget {
-  const TempatureScreen({Key? key}) : super(key: key);
+class HumidityScreen extends StatelessWidget {
+  const HumidityScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +49,8 @@ class TempatureScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.white10,
       ),
-      body: GetBuilder<TempatureController>(
-        init: TempatureController(),
+      body: GetBuilder<HumidityController>(
+        init: HumidityController(),
         builder: (controller) {
           return Padding(
             padding:
@@ -66,7 +66,7 @@ class TempatureScreen extends StatelessWidget {
                       isSelected: controller.index.value == 0,
                       text: 'ອຸ່ນຫະພູມ',
                       onTap: () {
-                        controller.index.value = 0;
+                        controller.index.value = 1;
                         Navigator.pushReplacementNamed(
                             context, custom_route.Route.temperature);
                       },
@@ -104,7 +104,7 @@ class TempatureScreen extends StatelessWidget {
               ),
               AppSpaces.vertical20,
               const Text(
-                'ອຸ່ນຫະພູມ',
+                'ຄວາມຊຸ່ມ',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16,
@@ -130,9 +130,8 @@ class TempatureScreen extends StatelessWidget {
                     ),
                     min: 13,
                     max: 25,
-                    initialValue: controller.tempature.value,
-                    onChangeEnd: (_value) =>
-                        controller.tempature.value = _value,
+                    initialValue: controller.humidity.value,
+                    onChangeEnd: (_value) => controller.humidity.value = _value,
                     innerWidget: (percentage) => Padding(
                       padding: const EdgeInsets.all(30.0),
                       child: Center(
@@ -149,7 +148,7 @@ class TempatureScreen extends StatelessWidget {
                               ],
                             ),
                             child: Container(
-                                margin: EdgeInsets.all(8),
+                                margin: const EdgeInsets.all(8),
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: Get.theme.primaryColor,

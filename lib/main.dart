@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'constants/routes.dart' as custom_route;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,15 +20,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      routes: custom_route.Route.getAll(),
       debugShowCheckedModeBanner: false,
-      title: 'HR Controller',
+      title: 'App_SmartFarm',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: const Color(0xff867cef),
+        primaryColor: const Color(0xff70A7FA),
         backgroundColor: const Color(0xfff0f0f0),
         disabledColor: const Color(0xffededed),
-        colorScheme:
-            ColorScheme.fromSwatch(accentColor: const Color(0xffaf92ea)),
+        colorScheme: ColorScheme.fromSwatch(
+            accentColor: const Color.fromARGB(255, 255, 255, 255)),
         textTheme: GoogleFonts.openSansTextTheme(),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

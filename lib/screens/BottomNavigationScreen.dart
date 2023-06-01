@@ -1,7 +1,6 @@
 import 'package:appsmartfarm_flutter/controllers/BottomNavigationController.dart';
 import 'package:appsmartfarm_flutter/screens/HomeScreen.dart';
-import 'package:appsmartfarm_flutter/screens/LightsScreen.dart';
-import 'package:appsmartfarm_flutter/screens/TempatureScreen.dart';
+import 'package:appsmartfarm_flutter/screens/ProfileScreen.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,33 +20,39 @@ class BottomNavigationScreen extends StatelessWidget {
                 children: [
                   [
                     const HomeScreen(),
-                    const TempatureScreen(),
-                    const LightsScreen(),
+                    const ProfileScreen(),
                   ][controller.index]
                 ],
               ),
               bottomNavigationBar: BottomNavigationBar(
                 currentIndex: controller.index,
                 onTap: controller.setIndex,
-                selectedLabelStyle: const TextStyle(fontSize: 10),
+                selectedLabelStyle:
+                    const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
                 selectedItemColor: Colors.black,
                 unselectedItemColor: Colors.grey,
                 items: const [
                   BottomNavigationBarItem(
                     icon: Image(
-                      image: AssetImage(AppAssets.bedroom),
+                      image: AssetImage(AppAssets.home),
+                      width: 40,
+                    ),
+                    label: 'ໜ້າຫຼັກ',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Image(
+                      image: AssetImage(AppAssets.profile),
                       width: 30,
                     ),
-                    label: '',
+                    label: 'ບັນຊີ',
                   ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.verified_user),
-                    label: '',
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.signal_cellular_alt),
-                    label: '',
-                  ),
+                  // BottomNavigationBarItem(
+                  //   icon: Image(
+                  //     image: AssetImage(AppAssets.logout),
+                  //     width: 30,
+                  //   ),
+                  //   label: 'ຕັ້ງຄ່າ',
+                  // ),
                 ],
               ),
             ),
