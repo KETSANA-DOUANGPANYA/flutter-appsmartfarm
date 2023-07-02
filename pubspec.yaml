@@ -39,6 +39,7 @@ dependencies:
   sleek_circular_slider: ^2.0.1
   flutter_switch: ^0.3.2
   animated_splash_screen: ^1.3.0
+  form_field_validator: any
 
 dev_dependencies:
   flutter_test:

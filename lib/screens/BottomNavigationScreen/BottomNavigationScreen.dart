@@ -1,6 +1,6 @@
 import 'package:appsmartfarm_flutter/controllers/BottomNavigationController.dart';
-import 'package:appsmartfarm_flutter/screens/HomeScreen.dart';
-import 'package:appsmartfarm_flutter/screens/ProfileScreen.dart';
+import 'package:appsmartfarm_flutter/screens/HomeScreen/HomeScreen.dart';
+import 'package:appsmartfarm_flutter/screens/ProfileScreen/ProfileScreen.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

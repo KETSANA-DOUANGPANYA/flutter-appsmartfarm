@@ -1,8 +1,4 @@
-import 'package:appsmartfarm_flutter/packages/splash.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'packages.dart';
 import 'constants/routes.dart' as custom_route;
 
 void main() {
@@ -29,7 +25,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xfff0f0f0),
         disabledColor: const Color(0xffededed),
         colorScheme: ColorScheme.fromSwatch(
-            accentColor: const Color.fromARGB(255, 255, 255, 255)),
+            accentColor: const Color.fromRGBO(189, 223, 255, 1)),
         textTheme: GoogleFonts.openSansTextTheme(),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

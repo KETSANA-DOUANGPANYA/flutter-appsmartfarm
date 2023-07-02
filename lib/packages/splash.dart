@@ -1,4 +1,5 @@
-import 'package:appsmartfarm_flutter/screens/BottomNavigationScreen.dart';
+import 'package:appsmartfarm_flutter/screens/BottomNavigationScreen/BottomNavigationScreen.dart';
+import 'package:appsmartfarm_flutter/screens/LoginScreen/LoginScreen.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -16,7 +17,7 @@ class Splash extends StatelessWidget {
         width: 400,
         height: 400,
       ),
-      nextScreen: const BottomNavigationScreen(),
+      nextScreen: const Login(),
       splashTransition: SplashTransition.fadeTransition,
     );
   }
