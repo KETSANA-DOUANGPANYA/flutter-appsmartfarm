@@ -46,13 +46,6 @@ class BottomNavigationScreen extends StatelessWidget {
                     ),
                     label: 'ບັນຊີ',
                   ),
-                  // BottomNavigationBarItem(
-                  //   icon: Image(
-                  //     image: AssetImage(AppAssets.logout),
-                  //     width: 30,
-                  //   ),
-                  //   label: 'ຕັ້ງຄ່າ',
-                  // ),
                 ],
               ),
             ),

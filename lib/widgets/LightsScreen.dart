@@ -23,7 +23,7 @@ class LightsScreen extends StatelessWidget {
             ),
             AppSpaces.vertical10,
             Image.asset(
-              AppAssets.sun,
+              AppAssets.light,
               height: 40,
             ),
             AppSpaces.vertical10,

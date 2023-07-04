@@ -1,3 +1,4 @@
+import 'package:appsmartfarm_flutter/packages.dart';
 import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
@@ -6,10 +7,10 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
-      height: 100,
-      decoration:
-          BoxDecoration(image: DecorationImage(image: AssetImage("logo"))),
+      width: 150,
+      height: 150,
+      decoration: const BoxDecoration(
+          image: DecorationImage(image: AssetImage(AppAssets.iconapp))),
     );
   }
 }

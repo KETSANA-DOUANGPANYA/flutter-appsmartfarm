@@ -1,3 +1,4 @@
+import 'package:appsmartfarm_flutter/screens/RegisterScreen/components/body.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -5,6 +6,8 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Body(),
+    );
   }
 }

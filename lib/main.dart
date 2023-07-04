@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: const Color(0xff70A7FA),
+        // ignore: deprecated_member_use
         backgroundColor: const Color(0xfff0f0f0),
         disabledColor: const Color(0xffededed),
         colorScheme: ColorScheme.fromSwatch(

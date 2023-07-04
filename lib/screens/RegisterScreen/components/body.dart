@@ -1,7 +1,11 @@
 import 'package:appsmartfarm_flutter/model/register_Model.dart';
+import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
+import 'package:appsmartfarm_flutter/widgets/dialog_loading.dart';
+import 'package:appsmartfarm_flutter/widgets/logoApp.dart';
 
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -30,13 +34,7 @@ class _BodyState extends State<Body> {
                 SizedBox(
                   height: size.height * 0.03,
                 ),
-                Center(
-                  child: Image.asset(
-                    "logo",
-                    width: 100,
-                    height: 100,
-                  ),
-                ),
+                const Logo(),
                 SizedBox(
                   height: size.height * 0.03,
                 ),
@@ -65,7 +63,9 @@ class _BodyState extends State<Body> {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                          icon: Icon(Icons.people),
+                          icon: ImageIcon(
+                            AssetImage(AppAssets.user),
+                          ),
                           labelText: 'ຊື່ ',
                         ),
                         onSaved: (String? value) {
@@ -82,7 +82,9 @@ class _BodyState extends State<Body> {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                          icon: Icon(Icons.people),
+                          icon: ImageIcon(
+                            AssetImage(AppAssets.user),
+                          ),
                           labelText: 'ນາມສະກຸນ',
                         ),
                         onSaved: (String? value) {
@@ -100,7 +102,9 @@ class _BodyState extends State<Body> {
                       ),
                       TextFormField(
                         decoration: const InputDecoration(
-                          icon: Icon(Icons.email),
+                          icon: ImageIcon(
+                            AssetImage(AppAssets.gmail),
+                          ),
                           labelText: 'ອີເມວ ',
                         ),
                         onSaved: (String? value) {
@@ -119,7 +123,9 @@ class _BodyState extends State<Body> {
                       TextFormField(
                         obscureText: true,
                         decoration: const InputDecoration(
-                          icon: Icon(Icons.key),
+                          icon: ImageIcon(
+                            AssetImage(AppAssets.key),
+                          ),
                           labelText: 'ລະຫັດຜ່ານ ',
                         ),
                         onSaved: (String? value) {
@@ -144,7 +150,12 @@ class _BodyState extends State<Body> {
                           ),
                         ),
                         child: MaterialButton(
-                            onPressed: () async {},
+                            onPressed: () async {
+                              if (formKey.currentState!.validate()) {
+                                formKey.currentState!.save();
+                                DialogLoading(context, 'ກຳລັງລົງທະບຽນ');
+                              }
+                            },
                             child: const Text(
                               'ລົງທະບຽນ',
                               style: TextStyle(
@@ -157,7 +168,7 @@ class _BodyState extends State<Body> {
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.2,
+                  height: size.height * 0.1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -170,7 +181,10 @@ class _BodyState extends State<Body> {
                       width: 10,
                     ),
                     GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, custom_route.Route.login);
+                        },
                         child: const Text(
                           'ເຂົ້າສູ່ລະບົບ',
                           style: TextStyle(

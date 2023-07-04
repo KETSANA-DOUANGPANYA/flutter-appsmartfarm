@@ -1,4 +1,5 @@
 import 'package:appsmartfarm_flutter/screens/BottomNavigationScreen/BottomNavigationScreen.dart';
+import 'package:appsmartfarm_flutter/screens/HomeScreen/HomeScreen.dart';
 import 'package:appsmartfarm_flutter/screens/LoginScreen/LoginScreen.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
@@ -9,16 +10,18 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-      backgroundColor: Colors.white,
-      duration: 2000,
-      splash: Image.asset(
-        AppAssets.salad,
-        width: 400,
-        height: 400,
+    return SafeArea(
+      child: AnimatedSplashScreen(
+        backgroundColor: Colors.white,
+        duration: 5000,
+        splash: Image.asset(
+          AppAssets.iconapp,
+          width: 400,
+          height: 400,
+        ),
+        nextScreen: const Login(),
+        splashTransition: SplashTransition.fadeTransition,
       ),
-      nextScreen: const Login(),
-      splashTransition: SplashTransition.fadeTransition,
     );
   }
 }

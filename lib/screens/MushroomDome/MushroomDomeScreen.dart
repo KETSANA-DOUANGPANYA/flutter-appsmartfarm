@@ -79,7 +79,7 @@ class MushroomDomeScreen extends StatelessWidget {
                           ),
                           child: Tab(
                             icon: Image.asset(
-                              AppAssets.washingroom,
+                              AppAssets.temperature,
                               height: 50,
                               fit: BoxFit.cover,
                             ),

@@ -1,8 +1,9 @@
 import 'package:appsmartfarm_flutter/model/profile.dart';
+import 'package:appsmartfarm_flutter/packages.dart';
 import 'package:appsmartfarm_flutter/widgets/dialog_loading.dart';
 import 'package:appsmartfarm_flutter/widgets/logoApp.dart';
-import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
 // ignore: must_be_immutable
 class Body extends StatelessWidget {
@@ -62,7 +63,9 @@ class Body extends StatelessWidget {
                         ),
                         TextFormField(
                           decoration: const InputDecoration(
-                            icon: Icon(Icons.email),
+                            icon: ImageIcon(
+                              AssetImage(AppAssets.gmail),
+                            ),
                             labelText: 'ອີເມວ ',
                           ),
                           onSaved: (String? email) {
@@ -80,7 +83,9 @@ class Body extends StatelessWidget {
                         ),
                         TextFormField(
                           decoration: const InputDecoration(
-                            icon: Icon(Icons.code),
+                            icon: ImageIcon(
+                              AssetImage(AppAssets.key),
+                            ),
                             labelText: 'ລະຫັດຜ່ານ ',
                           ),
                           onSaved: (String? password) {
@@ -105,10 +110,14 @@ class Body extends StatelessWidget {
                             ),
                             child: MaterialButton(
                               onPressed: () async {
+                                DialogLoading(context, "ກຳລັງເຂົ້າສູ່ລະບົບ...");
+                                Navigator.pop(context);
+                                // ignore: use_build_context_synchronously
+                                Navigator.pushReplacementNamed(
+                                    context, custom_route.Route.tap);
                                 if (formKey.currentState!.validate()) {
                                   formKey.currentState!.save();
-                                  DialogLoading(
-                                      context, "ກຳລັງເຂົ້າສູ່ລະບົບ...");
+
                                   // try {
                                   //   await FirebaseAuth.instance
                                   //       .signInWithEmailAndPassword(
@@ -167,7 +176,7 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.2,
+                    height: size.height * 0.1,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -180,7 +189,10 @@ class Body extends StatelessWidget {
                         width: 10,
                       ),
                       GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, custom_route.Route.register);
+                          },
                           child: const Text(
                             'ລົງທະບຽນ',
                             style: TextStyle(
