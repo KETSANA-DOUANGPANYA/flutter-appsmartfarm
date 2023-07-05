@@ -1,5 +1,3 @@
-import 'package:appsmartfarm_flutter/screens/BottomNavigationScreen/BottomNavigationScreen.dart';
-import 'package:appsmartfarm_flutter/screens/HomeScreen/HomeScreen.dart';
 import 'package:appsmartfarm_flutter/screens/LoginScreen/LoginScreen.dart';
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +14,8 @@ class Splash extends StatelessWidget {
         duration: 5000,
         splash: Image.asset(
           AppAssets.iconapp,
-          width: 400,
-          height: 400,
         ),
+        splashIconSize: 200,
         nextScreen: const Login(),
         splashTransition: SplashTransition.fadeTransition,
       ),

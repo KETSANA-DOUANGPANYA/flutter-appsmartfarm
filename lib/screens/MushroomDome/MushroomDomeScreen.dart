@@ -1,10 +1,7 @@
 import 'package:appsmartfarm_flutter/packages.dart';
-import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
-import 'package:appsmartfarm_flutter/utils/appGradient.dart';
 import 'package:appsmartfarm_flutter/widgets/HumidityScreen.dart';
 import 'package:appsmartfarm_flutter/widgets/LightsScreen.dart';
 import 'package:appsmartfarm_flutter/widgets/TempatureScreen.dart';
-import 'package:flutter/material.dart';
 import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
 class MushroomDomeScreen extends StatelessWidget {

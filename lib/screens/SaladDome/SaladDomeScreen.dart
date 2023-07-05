@@ -1,6 +1,4 @@
 import 'package:appsmartfarm_flutter/packages.dart';
-import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
-import 'package:appsmartfarm_flutter/utils/appGradient.dart';
 import 'package:appsmartfarm_flutter/widgets/HumidityScreen.dart';
 import 'package:appsmartfarm_flutter/widgets/LightsScreen.dart';
 import 'package:appsmartfarm_flutter/widgets/TempatureScreen.dart';

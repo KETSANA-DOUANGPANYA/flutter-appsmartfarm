@@ -1,5 +1,6 @@
 import 'package:appsmartfarm_flutter/utils/AppAssets.dart';
 import 'package:flutter/material.dart';
+import 'package:appsmartfarm_flutter/constants/routes.dart' as custom_route;
 
 void dialogLogout(BuildContext context) {
   showDialog(
@@ -82,7 +83,10 @@ void dialogLogout(BuildContext context) {
                                       backgroundColor:
                                           MaterialStateProperty.all(
                                               Colors.blueGrey)),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(
+                                        context, custom_route.Route.login);
+                                  },
                                   child: const Padding(
                                     padding: EdgeInsets.symmetric(vertical: 10),
                                     child: Text('ຕົກລົງ'),

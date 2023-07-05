@@ -16,4 +16,5 @@ class AppAssets {
   static const String gmail = 'assets/icons/gmail 1.png';
   static const String key = 'assets/icons/key 1.png';
   static const String user = 'assets/icons/user.png';
+  static const String profileimages = 'assets/icons/Ellipse 5.png';
 }
